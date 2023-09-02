@@ -476,7 +476,7 @@ Q.10)Create below page using HTML CSS (Individual Registration)
          }
          .x
          {
-            margin-left: 50%;
+            margin-left: 45%;
          }
          
         
