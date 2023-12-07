@@ -1,0 +1,47 @@
+Q.1) What is jQuery? 
+
+=> jQuery is a JavaScript library that makes it easier to write common JavaScript tasks, such as manipulating HTML elements, handling events, animating elements, and making Ajax requests. jQuery is not a programming language, but a tool that simplifies JavaScript code. jQuery works across different browsers and has many plugins and extensions to enhance its functionality.
+
+Q.2) How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery,JQuery Animation?
+
+=> You can use jQuery to apply CSS to HTML elements. 
+     Here are some examples of how to add and remove classes in jQuery:
+
+     addClass(): This method adds one or more classes to the selected elements. 
+     
+     Here is an example of how to add a class to an element:
+     $(selector).addClass(className);
+
+     removeClass(): This method removes one or more classes from the selected elements. 
+     
+     Here is an example of how to remove a class from an element:
+     $(selector).removeClass(className);
+
+     toggleClass(): This method toggles between adding and removing classes from the selected elements. 
+
+     Here is an example of how to toggle a class on an element:
+     $(selector).toggleClass(className);
+
+     You can also use jQuery to create animations. 
+
+     Here is an example of how to animate an element’s width:
+     $(selector).animate({width: "50%"}, "slow");
+
+
+Q.3) How to create slider with animation?
+
+=> To create a slider with animation in jQuery, you can use the animate() method. 
+     This method is used to change the CSS property to create the animated effect for the selected element. 
+     
+     Here is an example of how to create a slide left and right toggle effect using jQuery:
+
+    $(document).ready(function(){
+      $("#flip").click(function(){
+        $("#panel").animate({
+          width: 'toggle'
+        });
+      });
+    });
+
+In this example, when the user clicks on the #flip element, the #panel element will slide left and right. 
+We can customize the animation by changing the CSS properties in the animate() method.
