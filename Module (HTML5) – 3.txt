@@ -1,0 +1,260 @@
+Q.1) What are the new tags added in HTML5?
+
+--> HTML5 introduced several new tags to improve the structure, semantics, and functionality of web pages. Here are some of the key new tags added in HTML5:
+
+Structural Tags
+- `<header>`: Defines a header for a document or a section.
+- `<footer>`: Defines a footer for a document or a section.
+- `<article>`: Defines an independent, self-contained content.
+- `<section>`: Defines a section in a document.
+- `<nav>`: Defines navigation links.
+- `<aside>`: Defines content aside from the content it is placed in.
+- `<main>`: Defines the main content of a document.
+
+Text-Level Semantics
+- `<mark>`: Defines marked/highlighted text.
+- `<time>`: Defines a specific time (or date).
+- `<progress>`: Represents the progress of a task.
+- `<meter>`: Defines a scalar measurement within a known range (a gauge).
+
+Multimedia
+- `<audio>`: Defines sound content.
+- `<video>`: Defines video content.
+- `<source>`: Defines multiple media resources for media elements (`<audio>` and `<video>`).
+- `<track>`: Defines text tracks for media elements (`<audio>` and `<video>`).
+- `<embed>`: Defines a container for an external application or interactive content.
+
+Forms
+- `<datalist>`: Contains a set of `<option>` elements that represent the permissible or suggested options available to other controls.
+- `<keygen>`: Defines a key-pair generator field (deprecated in HTML 5.2).
+- `<output>`: Represents the result of a calculation or user action.
+
+Interactive Elements
+- `<details>`: Defines additional details that the user can view or hide.
+- `<summary>`: Defines a visible heading for a `<details>` element.
+- `<dialog>`: Defines a dialog box or other interactive component, such as a dismissable alert, inspector, or subwindow.
+
+Scripting
+- `<canvas>`: Used to draw graphics, on the fly, via scripting (usually JavaScript).
+- `<template>`: Holds client-side content that should not be displayed when the page loads but can be instantiated later.
+- `<script>` (new attributes like `async` and `defer`): Defines client-side script.
+
+Metadata
+- `<meta charset="UTF-8">`: Specifies the character encoding for the HTML document.
+
+These new tags enhance the semantic structure of documents, provide better multimedia handling, and improve form functionality, among other benefits.
+
+
+Q.2)How to embed audio and video in a webpage?
+
+--> Embedding audio and video in a webpage is straightforward using HTML. Here's how you can do it:
+
+Embedding Audio
+
+To embed audio, you can use the `<audio>` tag. Here is a basic example:
+
+``` 
+<audio controls>
+  <source src="audiofile.mp3" type="audio/mpeg">
+</audio>
+
+```
+
+Attributes:
+
+- `controls`: Adds playback controls like play, pause, and volume.
+- `autoplay`: The audio will start playing as soon as it is ready.
+- `loop`: The audio will start over again, every time it is finished.
+- `muted`: The audio output will be muted.
+- `preload`: Specifies if and how the author thinks that the audio file should be loaded when the page loads. Values can be `auto`, `metadata`, or `none`.
+
+Example with More Attributes:
+
+``` 
+<audio controls autoplay loop muted preload="auto">
+  <source src="audiofile.mp3" type="audio/mpeg">
+</audio>
+
+```
+
+Embedding Video
+
+To embed video, you can use the `<video>` tag. Here is a basic example:
+
+``` 
+<video width="320" height="240" controls>
+  <source src="videofile.mp4" type="video/mp4">
+</video>
+
+```
+
+Attributes:
+
+- `controls`: Adds playback controls like play, pause, and volume.
+- `autoplay`: The video will start playing as soon as it is ready.
+- `loop`: The video will start over again, every time it is finished.
+- `muted`: The video output will be muted.
+- `preload`: Specifies if and how the author thinks that the video file should be loaded when the page loads. Values can be `auto`, `metadata`, or `none`.
+- `width` and `height`: Specifies the dimensions of the video player.
+
+Example with More Attributes:
+
+``` 
+<video width="320" height="240" controls autoplay loop muted preload="auto">
+  <source src="videofile.mp4" type="video/mp4">
+  <source src="videofile.ogg" type="video/ogg">
+</video>
+
+```
+
+Additional Notes:
+
+1. Multiple Sources: You can provide multiple `<source>` elements within the `<audio>` or `<video>` tags to provide different file formats. This ensures compatibility with different browsers.
+
+2. Fallback Content: You can include fallback content inside the `<audio>` or `<video>` tags for browsers that do not support these elements. This content will be displayed if the media cannot be played.
+
+3. Responsive Design : Use CSS to make the video responsive. Here's an example:
+
+``` 
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+```
+
+  Example HTML Document
+
+``` 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embed Audio and Video</title>
+</head>
+<body>
+  <h1>Embed Audio</h1>
+  <audio controls>
+    <source src="audiofile.mp3" type="audio/mpeg">
+  </audio>
+
+  <h1>Embed Video</h1>
+  <video width="320" height="240" controls>
+    <source src="videofile.mp4" type="video/mp4">
+  </video>
+</body>
+</html>
+
+```
+
+This document demonstrates how to embed both audio and video in a webpage using the appropriate HTML5 tags.
+
+
+Q.3) Semantic element in HTML5? 
+
+--> In HTML5, semantic elements are designed to give meaning to the structure of a web document. These elements clearly describe their meaning in a human- and machine-readable way. Here are some common semantic elements introduced in HTML5:
+
+1.  `<article>` : Represents a self-contained piece of content that can be independently distributed or reused. Examples include a blog post, a news article, or a forum post.
+
+2.  `<section>` : Defines a section in a document. It can be used to group related content together. A section typically has a heading.
+
+3.  `<nav>` : Represents a section of a page that links to other pages or to parts within the page. It is intended for navigation.
+
+4.  `<header>` : Defines a header for a document or a section. It can contain introductory content, navigational links, or other header-related items.
+
+5.  `<footer>` : Represents a footer for a document or a section. It usually contains information about the author, copyright information, or links to related documents.
+
+6.  `<aside>` : Represents content that is tangentially related to the content around it. It can be used for sidebars, pull quotes, or advertisements.
+
+7.  `<main>` : Represents the dominant content of the `<body>`. There can be only one `<main>` element in a document.
+
+8. `<figure>`: Represents self-contained content, often with a caption, such as illustrations, diagrams, photos, code listings, etc.
+
+9. `<figcaption>`: Represents a caption or legend for the content of its parent `<figure>` element.
+
+10. `<time>`: Represents a specific period in time. It can be used to mark up dates, times, or durations.
+
+Using these semantic elements enhances the accessibility of a website, improves SEO (search engine optimization), and makes the HTML code more readable and maintainable.
+
+
+Q.4) Canvas and SVG tags 
+
+--> HTML5 introduces the `<canvas>` and `<svg>` elements, which are used to draw graphics on a web page. Each has its own use cases, strengths, and limitations.
+
+`<canvas>` Element
+
+The `<canvas>` element is used to draw 2D graphics using JavaScript. It is essentially a bitmap canvas that can be used for rendering graphs, game graphics, or other visual images on the fly.
+
+Basic Usage:
+
+```
+<canvas id="myCanvas" width="200" height="100"></canvas>
+
+<script>
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+ctx.fillStyle = '#FF0000';
+ctx.fillRect(10, 10, 150, 75);
+</script>
+
+```
+
+Features:
+- Uses JavaScript for drawing.
+- Supports both 2D and 3D rendering (with WebGL for 3D).
+- Good for dynamic graphics where pixel manipulation is needed.
+- Not easily scalable without losing quality.
+- Does not support event handling directly on drawn objects.
+
+`<svg>` Element
+
+The `<svg>` (Scalable Vector Graphics) element is used to define vector-based graphics directly in the HTML. SVGs are XML-based and describe images using mathematical equations, which makes them resolution-independent and scalable without losing quality.
+
+Basic Usage:
+
+```
+<svg width="200" height="100">
+  <rect width="200" height="100" style="fill:blue;" />
+</svg>
+
+```
+
+Features:
+- XML-based and defined directly in the HTML or in separate .svg files.
+- Scalable without loss of quality (resolution-independent).
+- Supports event handling and interactivity.
+- Ideal for static or less frequently updated graphics like logos, icons, and charts.
+- Easier to animate using CSS and SMIL (Synchronized Multimedia Integration Language).
+
+Comparison
+
+| Feature       | `<canvas>`                          | `<svg>`                            |
+|---------------|-------------------------------------|------------------------------------|
+| Type          | Raster-based (pixel-based)          | Vector-based (math-based)          |
+| Scripting     | JavaScript required for drawing     | XML-based, can be manipulated with JavaScript |
+| Scalability   | Loses quality when scaled           | Scales perfectly without quality loss |
+| Interactivity | No inherent support for event handling | Native support for event handling   |
+| Performance   | Better for rendering many objects or real-time changes | Better for static or less dynamic images |
+| Use Case      | Games, real-time visualizations     | Icons, logos, infographics         |
+
+Both `<canvas>` and `<svg>` are powerful tools for rendering graphics in web applications, and the choice between them depends on the specific needs of the project.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
